@@ -1,7 +1,10 @@
 #include "lists.h"
-#include <stdio.h>
 
-/* Function to check for cycle */
+/**
+ * check_cycle - checks if a singly linked list has a cycle in it
+ * @list: pointer to the head of the list
+ * Return: 0 if no cycle, 1 if a cycle is found
+ */
 int check_cycle(listint_t *list) {
     listint_t *slow = list, *fast = list;
 
@@ -15,3 +18,4 @@ int check_cycle(listint_t *list) {
 
     return 0; /* No cycle found */
 }
+
