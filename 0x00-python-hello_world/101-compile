@@ -1,0 +1,13 @@
+#!/bin/bash
+# Compile the Python script
+python3 -m py_compile "$PYFILE"
+
+# Check if compilation succeeded
+if [ $? -eq 0 ]; then
+    echo "Compiling $PYFILE ..."
+    mv "${PYFILE}c" "${PYFILE}c"
+    echo "Compilation successful. Output filename: ${PYFILE}c"
+else
+    echo "Compilation failed."
+    exit 1
+fi
