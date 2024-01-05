@@ -4,4 +4,3 @@ def magic_calculation(a, b):
     result = (result ** a)     # LOAD_FAST a, BINARY_POWER
     result += b                # LOAD_FAST b, BINARY_ADD
     return result              # RETURN_VALUE
-magic_calculation()
