@@ -1,21 +1,14 @@
 #!/usr/bin/python3
-import dis
-import types
-
-def print_names(module):
-    bytecode = module.__code__
-    names = []
-    for instruction in dis.get_instructions(bytecode):
-        if 'LOAD_NAME' in instruction.opname and not instruction.argrepr.startswith(('<', '__')):
-            names.append(instruction.argrepr)
-
-    names = sorted(set(names))
-    for name in names:
-        print(name)
+import marshal
 
 if __name__ == "__main__":
     with open('hidden_4.pyc', 'rb') as file:
-        code = file.read()
-        module = types.CodeType(
-            0, 0, 0, 0, 67, code, (), (), (), '', '', 0, b'')
-        print_names(types.ModuleType(module))
+        magic = file.read(4)
+        mod_date = file.read(4)
+        code_obj = marshal.load(file)
+
+        names = [name for name in code_obj.co_names if not name.startswith('__')]
+        names.sort()
+
+        for name in names:
+            print(name)
