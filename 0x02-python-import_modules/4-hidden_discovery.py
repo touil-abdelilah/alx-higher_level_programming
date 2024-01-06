@@ -1,17 +1,23 @@
 #!/usr/bin/python3
-import marshal
-import types
+import dis
 
-def extract_names(file_path):
-    with open(file_path, 'rb') as file:
-        magic_number = file.read(4)
-        mod_time = file.read(4)
-        code_obj = marshal.load(file)
+# Load the bytecode from the file
+with open('hidden_4.pyc', 'rb') as file:
+    code = file.read()
 
-        names = sorted(set(code_obj.co_names))
-        for name in names:
-            if not name.startswith('__'):
-                print(name)
+# Disassemble the bytecode
+instructions = dis.get_instructions(code)
+
+# Iterate through the instructions and find the names
+names = set()
+for instr in instructions:
+    if instr.opname == 'LOAD_NAME' and not instr.argrepr.startswith('__'):
+        names.add(instr.argrepr)
+
+# Print the names in alphabetical order
+for name in sorted(names):
+    print(name)
+
 
 if __name__ == "__main__":
     file_path = 'hidden_4.pyc'
