@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -11,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
     listint_t *current = *head;
     int len = 0, i = 0;
-    int arr[10000];  // Maximum assumed list length
+    int arr[10000];  /* Maximum assumed list length */
 
     if (*head == NULL || (*head)->next == NULL)
         return (1);
