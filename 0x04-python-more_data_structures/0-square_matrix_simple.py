@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def square_matrix_simple(matrix=[]):
     # Create a new matrix with the same size as the input matrix
     result_matrix = [row[:] for row in matrix]
