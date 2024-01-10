@@ -5,4 +5,3 @@ def search_replace(my_list, search, replace):
     # Replace 'search' with 'replace' wherever it occurs
     new_list = [replace if element == search else element for element in my_list]
     return new_list
-
