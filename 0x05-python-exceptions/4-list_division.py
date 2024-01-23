@@ -22,4 +22,4 @@ def list_division(my_list_1, my_list_2, list_length):
             print(e)
         finally:
             result.append(division_result)
-    return result3
+    return result
