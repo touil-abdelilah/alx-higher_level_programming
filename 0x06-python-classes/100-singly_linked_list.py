@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""SinglyLinkedList module""
+"""SinglyLinkedList module"""
 
 
 class Node:
@@ -36,9 +36,9 @@ class Node:
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList:
     """Class that defines a singly linked list."""
-
     def __init__(self):
         """Simple instantiation method."""
         self.head = None
