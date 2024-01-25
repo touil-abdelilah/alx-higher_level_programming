@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 for nbr in range(99):
-    print(f"{nbr} = {hex(nbr)}")
+    print("{} = {}".format(nbr, hex(nbr)))
