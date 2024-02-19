@@ -20,4 +20,3 @@ def uppercase(s):
         # Print each character without newline
         print("{}".format(uppercase_char), end="")
     # Print newline after printing the entire string in uppercase
-    print("")
