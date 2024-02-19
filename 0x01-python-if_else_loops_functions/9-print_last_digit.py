@@ -1,15 +1,17 @@
-#!/usr/bin/bash
-"""
-a function that print the last digit on a number 
-
-args:
-    number:the inpu value
-function:
-    print_last_digit: takes number as argument 
-    and returns the last digit
-"""
+#!/usr/bin/python3
 
 
 def print_last_digit(number):
-    last_digit = number % 10
-    print("{}".format(last_digit), end(""))
+    """
+    Print the last digit of a number.
+
+    Args:
+        number: The input number.
+
+    Returns:
+        The value of the last digit.
+    """
+    # Calculate the remainder whendividing by 10
+    last_digit = abs(number) % 10
+    print("{}".format(last_digit), end="")  # Print the last digit
+    return last_digit  # Return the last digit
