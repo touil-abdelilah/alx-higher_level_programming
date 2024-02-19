@@ -11,12 +11,14 @@ def uppercase(s):
     Returns:
         None
     """
+    result = ""  # Initialize an empty string to store the uppercase characters
     for char in s:
         # Convert lowercase letters to uppercase
         if ord('a') <= ord(char) <= ord('z'):
             uppercase_char = chr(ord(char) - (ord('a') - ord('A')))
         else:
             uppercase_char = char
-        # Print each character without newline
-        print("{}".format(uppercase_char), end="")
-    # Print newline after printing the entire string in uppercase
+        # Append each uppercase character to the result string
+        result += "{}".format(uppercase_char)
+    # Print the entire string containing the uppercase characters
+    print(result)
