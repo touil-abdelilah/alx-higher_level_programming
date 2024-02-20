@@ -18,4 +18,4 @@ def remove_char_at(str, n):
             continue
         else:
             str_copy += str[i]
-    return(str_copy)
+    return (str_copy)
