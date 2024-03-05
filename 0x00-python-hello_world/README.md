@@ -75,5 +75,3 @@ print(word[1:4])  # Output: yth
 ## What is the official Python coding style and how to check your code with pycodestyle
 
 The official Python coding style is documented in PEP 8 (Python Enhancement Proposal 8). It covers topics such as indentation, naming conventions, line length, and more. You can check your code against the PEP 8 style guide using tools like `pycodestyle` (formerly known as `pep8`). Simply install `pycodestyle` using pip (`pip install pycodestyle`), and then run it on your Python code to identify style violations and ensure adherence to the official coding standards.
-
-This README file provides an overview of Python programming, including its history, features, and best practices. Whether you're new to Python or a seasoned developer, understanding these concepts will help you write clean, efficient, and maintainable code in Python.
