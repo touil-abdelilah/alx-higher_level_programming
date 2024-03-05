@@ -22,7 +22,7 @@ The Zen of Python, also known as PEP 20 (Python Enhancement Proposal 20), is a c
 
 ## How to use the Python interpreter
 
-The Python interpreter is a command-line tool that allows you to interactively execute Python code. You can start the Python interpreter by typing `python` in your terminal or command prompt. Once the interpreter is running, you can enter Python code directly, and it will be executed immediately.
+The Python interpreter is a command-line tool that allows you to interactively execute Python code. You can start the Python interpreter by typing `python3...` in your terminal or command prompt. Once the interpreter is running, you can enter Python code directly, and it will be executed immediately.
 
 ## How to print text and variables using print
 
