@@ -1,4 +1,4 @@
-# What is Database & SQL?
+#  Introduction to Databases and SQL
 
 ## Introduction
 In the world of software development and data management, understanding databases and SQL (Structured Query Language) is crucial. Databases serve as organized collections of data, while SQL provides a standardized language for interacting with and managing that data. This README provides an overview of databases, SQL, and their key concepts.
