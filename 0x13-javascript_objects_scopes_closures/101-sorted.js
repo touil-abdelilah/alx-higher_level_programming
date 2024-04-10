@@ -4,12 +4,12 @@ const { dict } = require('./101-data');
 
 const sortedDict = {};
 
-for (const userId in dict) {
-  const occurrences = dict[userId];
-  if (!sortedDict[occurrences]) {
-    sortedDict[occurrences] = [];
+Object.keys(dict).forEach(userId => {
+  const occurrence = dict[userId];
+  if (!sortedDict[occurrence]) {
+    sortedDict[occurrence] = [];
   }
-  sortedDict[occurrences].push(userId);
-}
+  sortedDict[occurrence].push(userId);
+});
 
 console.log(sortedDict);
