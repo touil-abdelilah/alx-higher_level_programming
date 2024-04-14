@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 """
-Script to list all states with a name starting with N from the database hbtn_0e_0_usa
+Script to list all states with a name starting
+with N from the database hbtn_0e_0_usa
 """
 
 import sys
 import MySQLdb
 
+
 def filter_states(username, password, database):
     """
-    Function to list all states with a name starting with N from the database hbtn_0e_0_usa
+    Function to list all states with a name starting
+    with N from the database hbtn_0e_0_usa
     """
     # Connect to MySQL server running on localhost at port 3306
     db = MySQLdb.connect(host="localhost",
@@ -34,8 +37,10 @@ def filter_states(username, password, database):
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
-    # Get MySQL username, password, and database name from command-line arguments
+    # Get MySQL username, password,
+    # and database name from command-line arguments
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
         sys.exit(1)
@@ -45,4 +50,3 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     filter_states(username, password, database)
-
