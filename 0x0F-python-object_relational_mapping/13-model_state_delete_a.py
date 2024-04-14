@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script to change the name of a State object in the database hbtn_0e_6_usa
+Script to delete State objects with a name containing the letter a
 """
 
 import sys
@@ -20,13 +20,11 @@ if __name__ == "__main__":
     # Create a Session
     session = Session()
 
-    # Query the State object with id 2
-    state = session.query(State).filter_by(id=2).first()
-
-    if state:
-        # Change the name to New Mexico
-        state.name = "New Mexico"
-        session.commit()
+    # Query and delete all State objects with a name containing the letter a
+    states_with_a = session.query(State).filter(State.name.like('%a%')).all()
+    for state in states_with_a:
+        session.delete(state)
+    session.commit()
 
     # Close the session
     session.close()
