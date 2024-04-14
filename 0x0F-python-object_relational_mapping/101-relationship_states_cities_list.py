@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Script to list all State objects and corresponding
-City objects from the database
-"""
+"""Script to list all State objects and corresponding City objects"""
 
 import sys
 from sqlalchemy import create_engine
@@ -25,7 +22,7 @@ if __name__ == "__main__":
     # Query all State objects and their corresponding City objects
     states = session.query(State).order_by(State.id).all()
 
-    # Loop through each State and print its name along with its cities
+    # Loop through each State and print its name along with its city details
     for state in states:
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
