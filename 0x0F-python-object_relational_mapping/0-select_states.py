@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-"""Script to list all states from the database hbtn_0e_0_usa"""
+"""
+Script to list all states from the database hbtn_0e_0_usa
+"""
 
 import sys
 import MySQLdb
 
-if __name__ == "__main__":
-    # Get MySQL username, password, and database name from command-line arguments
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
-
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
+def list_states(username, password, database):
+    """
+    Function to list all states from the database hbtn_0e_0_usa
+    """
     # Connect to MySQL server running on localhost at port 3306
     db = MySQLdb.connect(host="localhost",
                          port=3306,
@@ -37,3 +33,15 @@ if __name__ == "__main__":
     # Close the cursor and database connection
     cursor.close()
     db.close()
+
+if __name__ == "__main__":
+    # Get MySQL username, password, and database name from command-line arguments
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
+        sys.exit(1)
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    list_states(username, password, database)
