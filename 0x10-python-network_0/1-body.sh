@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL to the 3nd
-curl -sL "$1"
+# shellcheck disable=SC2046
+if [ $(curl -L -s -X HEAD -w "%{http_code}" "$1") == '200' ]; then curl -Ls "$1"; fi
