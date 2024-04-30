@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL b0dy siz3
-curl -sw '%{size_download}\n' -o /dev/null "$1"
+# script to get the body size of a request
+curl -Is "$1" | grep -w 'Content-Length' | cut -f2 -d' '
